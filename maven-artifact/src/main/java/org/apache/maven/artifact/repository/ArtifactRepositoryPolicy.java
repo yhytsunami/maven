@@ -21,6 +21,7 @@ package org.apache.maven.artifact.repository;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Describes a set of policies for a repository to use under certain conditions.
@@ -200,12 +201,11 @@ public class ArtifactRepositoryPolicy
         }
     }
 
-    @SuppressWarnings( "checkstyle:magicnumber" )
     private int ordinalOfUpdatePolicy( String policy )
     {
         if ( ArtifactRepositoryPolicy.UPDATE_POLICY_DAILY.equals( policy ) )
         {
-            return 1440;
+            return (int) TimeUnit.DAYS.toMinutes( 1 );
         }
         else if ( ArtifactRepositoryPolicy.UPDATE_POLICY_ALWAYS.equals( policy ) )
         {
