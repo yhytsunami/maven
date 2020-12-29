@@ -479,6 +479,7 @@ under the License.
   <build>
     <pluginManagement>
       <plugins>
+<!--
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
@@ -492,10 +493,11 @@ under the License.
             <dependency>
               <groupId>org.apache.maven.shared</groupId>
               <artifactId>maven-shared-resources</artifactId>
-              <version>3-SNAPSHOT</version>
+              <version>3</version>
             </dependency>
           </dependencies>
         </plugin>
+-->
         <plugin>
           <groupId>org.codehaus.plexus</groupId>
           <artifactId>plexus-component-metadata</artifactId>
